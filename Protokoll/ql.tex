@@ -20,11 +20,16 @@ nofootinbib,superscriptaddress]{revtex4-1}
 \author         {M. Pfeifer}
 \email[Email: ]{max.pfeifer@physik.hu-berlin.de}
 \affiliation    {Humboldt-Universität zu Berlin, Institut für Physik}
-\date[Versuchsdatum: ]{01.06.2017}
+\date[Versuchsdatum: ]{22.06.2017}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Hier steht der Abstract, also einmal kurz beschreiben, was wir gemacht haben
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
+a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
+tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
+consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
+ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
+quis nisi.
 \end{abstract}
 
 
@@ -36,64 +41,35 @@ Hier steht der Abstract, also einmal kurz beschreiben, was wir gemacht haben
 
 \section{Theorie}
 
-Hier mal noch Beispiele wie man Gleichungen richtig referenziert, siehe
-Gleichung.~\ref{eq:first-equation} :
-\begin{equation}
-   \chi_+(p)\alt{\bf [}2|{\bf p}|(|{\bf p}|+p_z){\bf ]}^{-1/2}
-   \left(
-   \begin{array}{c}
-      |{\bf p}|+p_z\\
-      px+ip_y
-   \end{array}\right)
-   \label{eq:first-equation}
-\end{equation}
+Der Leitwert ist das Inverse des Widerstandes und ist ein Maß dafür, wie gut ein
+Material Strom leitet. Die Quantisierung des Leitwertes kann wie folgt erklärt
+werden: Wir modellieren den Quantenpunktkontakt als ein effektives Kastenpotential
+mit Breite $d_x$ und Dicke $d_y$. Es bilden sich senkrecht zur Bewegungsrichtung
+stehende Elektronenwellen mit der Energie
+
+  \begin{equation}
+    E_{lm} = \frac{\pi^2 \hbar^2}{2 m_e} \left(\frac{l^2}{d_x^2}+\frac{m^2}{d_y^2} \right)
+  \end{equation}
+
+In Bewegungsrichtung haben wir unter den Voraussetzungen ein kontinuierliches
+Energiespektrum mit $E_z = \hbar^2 k_z^2 / 2m_e$. Die Gesamtenergie der elektronischen
+Zustände ist dann: $E_{ges} = E_{lm} + E_z$.
+Die Zustandsdichte in einem eindimensionalen System ist gegeben durch:
+
+  \begin{equation}
+    D(E) dE = \frac{1}{\pi \hbar} \sqrt{\frac{m}{2 E}}dE
+  \end{equation}
+
+Bei Anlegen einer kleinen Spannung $dV$ folgt ein kleiner Strom $dI = e v dn$,
+wobei $dn = D(E)dE$. Somit ist (mit $v = \sqrt{2E/m}$):
+
+  \begin{equation}
+    G = \frac{dI}{dV} = \frac{evD(E)dE}{dV} = \frac{e^2vD(E)dV}{dV} = \frac{2e^2}{h}
+  \end{equation}
 
 
-Oder auch in der Zeile: $\vec{\psi_1} = |\psi_1\rangle \equiv c_0|0\rangle +
-c_1|1\rangle \chi^2 \approx
-\prod\sum\left[\frac{y_i-f(x_i)}{\sigma_i}\right]^2 |\psi_1\rangle
-\sim \lim_{\mu \rightarrow \infty}p(x;\mu) \geq \frac{1}{\sqrt{2 \pi
-\mu}} e^{-(x-\mu)^2 / 2\mu}P(x) \ll \int_{-\infty}^x p(x')dx'a
-\times b \pm c \Rightarrow \nabla \hbar$.
 
-Manchmal auch über mehr als eine Zeile, siehe Equation~\ref{eq:multilineeq}:
-\begin{eqnarray}
-  \sum \vert M^{\text{viol}}_g \vert ^2
-   &=&  g^{2n-4}_S(Q^2)~N^{n-2} (N^2-1)
-\nonumber
-\\
-   &&   \times \left( \sum_{i<j}\right) \sum_{\text{perm}}
-            \frac{1}{S_{12}}  \frac{1}{S_{12}} \sum_\tau c^f_\tau
-\,.
-\label{eq:multilineeq}
-\end{eqnarray}
 
-Natürlich gibts auch die guten alten subequations wie (\ref{subeq:1}) und
-(\ref{subeq:2}):
-\begin{subequations}
-\label{eq:whole}
-\begin{equation}
-  \left\{
-      abc123456abcdef\alpha\beta\gamma\delta1234556\alpha\beta
-       \frac{1\sum^{a}_{b}}{A^2}
-  \right\}
-%
-\,\label{subeq:1}
-\end{equation}
-\begin{eqnarray}
-  {\cal M} &=& ig_Z^2(4E_1E_2)^{1/2}(l_i^2)^{-1}
-                (g_{\sigma_2}^e)^2\chi_{-\sigma_2}(p_2)
-\nonumber\\
-  &&\times [\epsilon_i]_{\sigma_1}\chi_{\sigma_1}(p_1).\label{subeq:2}
-\end{eqnarray}
-\end{subequations}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
-a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
-tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
-consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
-ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
-quis nisi.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,7 +149,7 @@ quis nisi.
 \bibitem{vanhouten96}Henk van Houten et al. :  Quantum Point Contacts, Physics Today July S. 22–27, (1996)
 \bibitem{knop07}Michael H. Knop :  Ballistische Gleichrichtung in asymmetrischen elektronischen Wellenleiterkreuzen, Dissertation (2007)
 \bibitem{fischer02}S. F. Fischer et al. :  Control of the confining potential in ballistic constrictions using a persistent charging effect, Applied Physics Letters Vol. 81 Nr.15 (2002)
-\bibitem{apetrii02}G. Apetrii et al. :  Influence of processing parameters on the transport properties of quantum point contacts fabricated with an atomic force microscope, Institute of Physics Publishing Semicond. Sci. Technol. 17 S. 735–739 (2002) 
+\bibitem{apetrii02}G. Apetrii et al. :  Influence of processing parameters on the transport properties of quantum point contacts fabricated with an atomic force microscope, Institute of Physics Publishing Semicond. Sci. Technol. 17 S. 735–739 (2002)
 \end{thebibliography}
 
 
