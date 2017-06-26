@@ -1,0 +1,96 @@
+# Datum / Zeit: (Anfang) 22.06.2017 10:23:02 (Ende)  22.06.2017 10:23:30
+#
+# Einstellungen: 
+# Start:      AUX1 -0.200000 V 
+# End1:       AUX1 0.300000 V 
+# Step1:      AUX1 0.100000 V 
+# Holdtime:   AUX1 1001.000000 ms (Wartezeit nach dem Einstellen; automatisch erhöhen)
+#
+# aktuell:    AUX2 0.000000 V 
+# Start:      AUX2 0.000000 V 
+# End1:       AUX2 0.000000 V 
+# Step1:      AUX2 0.000000 V 
+# Holdtime:   AUX2 5001.000000 ms (Abstand der Datenpunkte)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# AUX3: 0.000000 V
+# AUX4: 0.000000 V
+#
+# B-Feld nicht abwarten; B-Feld nicht abschalten
+#
+# time constant: 0.100000 s
+# sensitivity: 1V/µA
+# dyn reserve: high reserve
+# slope: 18 dB/oct
+# sync filter: off
+# line filter: off
+#
+# Input:  I (1E+6)
+# ground: ground
+# couple: AC
+#
+# Lock-In - automeasure: off
+# ref. phase.:   0.00
+# ref. source: intern
+# osc. harm#: 1.000000
+# osc. freq.: 433.000000
+# osc. ampl.: 0.004000
+# ref. trigger: sine
+#
+# Channel 1
+# display: X
+# ratio: none
+# output: X
+#
+# Channel 2
+# display: Y
+# ratio: none
+# output: Y
+#
+# off. & exp.
+# X:  offset = 0.000000;  expand = none
+# Y:  offset = 0.000000;  expand = none
+# R:  offset = 0.000000;  expand = none
+#
+# Spannungsteilerfaktor Aux1:        Kein Teiler verwendet
+# Spannungsteilerfaktor Aux2:        Kein Teiler verwendet
+# Spannungsteilerfaktor Aux3:        Kein Teiler verwendet
+# Spannungsteilerfaktor Aux4:        Kein Teiler verwendet
+#
+# Spannungsteilerfaktor Osc. Ampl.:  100.000000
+# Spannungsteilerfaktor Messeingang: 10.000000
+#
+# Korrektur von Aux1 (Aux1' = Aux1 + X*Aux2*(Teiler Aux1/Teiler Aux2) mit  X = 0; keine Korrektur
+# Korrektur von Aux2 (Aux2' = Aux2 + X*Aux1*(Teiler Aux2/Teiler Aux1) mit  X = 0; keine Korrektur
+#
+#
+#
+#
+#
+#
+#
+# Bemerkungen: keine Bemerkungen
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#               Aux1,                Aux2,               Re(I),               Im(I),               Aux1',               Aux2',              Re(I)',              Im(I)'
+#                 U1,                  U2,               Re(I),               Im(I),           U1/Teiler,           U2/Teiler,      Re(I)/osc.Ampl,      Im(I)/osc.Ampl
+         -2.00000E-1,          0.00000E+0,         2.68564E-12,        -2.75337E-13,         -2.00000E-1,          0.00000E+0,          6.71410E-7,         -6.88342E-8
+         -1.00000E-1,          0.00000E+0,         2.86927E-12,         2.44473E-13,         -1.00000E-1,          0.00000E+0,          7.17318E-7,          6.11182E-8
+          0.00000E+0,          0.00000E+0,         3.19435E-12,         2.47804E-13,          0.00000E+0,          0.00000E+0,          7.98587E-7,          6.19510E-8
+          1.00000E-1,          0.00000E+0,         3.59536E-12,        -1.68755E-13,          1.00000E-1,          0.00000E+0,          8.98840E-7,         -4.21888E-8
+          2.00000E-1,          0.00000E+0,         3.85761E-12,         3.38620E-13,          2.00000E-1,          0.00000E+0,          9.64402E-7,          8.46550E-8
+          3.00000E-1,          0.00000E+0,         3.48389E-12,         1.31451E-13,          3.00000E-1,          0.00000E+0,          8.70972E-7,          3.28628E-8
