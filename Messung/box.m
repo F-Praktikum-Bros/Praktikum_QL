@@ -2,7 +2,7 @@ clear all;
 clc;
 
 % Importiere Daten aus praeparierten Tabellen
-Ohm100  = importdata('100ohm.dat',',');
+Ohm100  = fopen('100ohm.dat');
 Ohm1k   = importdata('1000ohm.dat',',');
 Ohm10k  = importdata('10kOhm.dat',',');
 Ohm100k = importdata('100kOhm.dat',',');
