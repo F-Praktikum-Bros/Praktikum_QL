@@ -85,6 +85,18 @@ getaucht und entsprechend der Tabelle 2.1 in \cite{skript11} verkabelt. Nun mess
 wir erneut die Ströme/Spannungen und ermitteln hieraus den Leitwert (weiteres
 hierzu in Abschnitt III).
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Berechnung-Bilder/box.eps}
+  \caption{
+  lineare Regression (Fehlerbalken verzehnfacht). Wir erhalten mit
+  Model $R_{exp}=a*R_{theo}+b$:\\
+  Steigung:  $a = 0.9944 \pm 3*10^{-4}$\\
+  Achsenabschnitt:  $b = (5424 \pm 311) \Omega$
+  }
+  \label{fig:box}
+\end{figure}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,18 +108,75 @@ Widerstände 100 $\Omega$, 1 $k\Omega$, 10 $k\Omega$, 100 $k\Omega$ und 1 $M\Ome
 die Real- und Imaginärteile der Impedanz bei verschiedenen Spannungswerten ermittelt
 und durch pythagoräische Addtion der Widerstand ermittelt. Als Fehler wurde auf der
 Widerstandsbox $0.1\%$ für den Bereich $100\Omega - 10k\Omega$ und $1\%$ für den
-Bereich $10k\Omega - 1M\Omega$ gegeben. Aus unseren Messdaten ergibt sich Abbildung
-\ref{fig:box}
+Bereich $10k\Omega - 1M\Omega$ gegeben. Aus unseren Messdaten ergibt sich Abb.
+\ref{fig:box}. Aus dem Achsenabschnitt können wir den Serienleitwert bestimmen:
+
+  \begin{equation}
+    G_S = b^{-1} = (18 \pm 1) mS
+  \end{equation}
+
+Die Abweichung der Steigung von 1 werden wir als systematischen Fehler der Messung
+interpretieren. Wir müssen also für die folgenden Diagramme den Leitwert wie folgt
+korrigieren: $G_{exp} \rightarrow a^{-1} G_{exp}$. Diese Kalibrierung erlaubt es
+uns im nächsten Teil die ermittelten Leitwerte zu korrigieren und ein somit ein
+akkurates Ergebnis für die Quantisierung des Leitwertes zu erhalten.
+
+
+\subsection{Serienleitwert MODFET}
+Nun untersuchen wir den MODFET, welchen wir (an einem Messstab befestigt) in
+flüssiges Helium getaucht haben. Zusätzlich wird eine Gate-Spannung angelegt,
+in deren Abhängigkeit wir der Leitwert bestimmen.Für diesen Teil des Experimentes
+verwenden wir die Struktur G. In Abb. \ref{fig:G} sind 2 der 3 Bereiche des MODFET
+gut zu sehen. Im Koordinatenursprung erkennen wir den Sperrbereich des Transistors,
+in dem kein Strom mehr fließt.Im Anschluss befindet sich der lineare Bereich, in
+dem sich der Transistor wie ein ohmscher Widerstand verhält, es gilt:
+$R = U/I \rightarrow G = I/U$.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\textwidth]{Berechnung-Bilder/box.eps}
-  \caption{Kalibrierung mit Widerstandsbox, lineare Regression}
-  \label{fig:box}
+  \includegraphics[width=0.5\textwidth]{Berechnung-Bilder/g.eps}
+  \caption{Struktur G, Bereiche des Feldeffekttransistors}
+  \label{fig:G}
 \end{figure}
 
+Der Leitwert nähert sich gegen Ende des linearen
+Bereiches einem Maximum an, der dem Sättigungsbereich entspricht. Hier verhält
+sich der Transistor wie eine nur noch durch die Eingangsspannung gesteuerte
+Stromquelle. Der Sättigungsleitwert ist in Abb. \ref{fig:G} als schwarze Linie
+gekennzeichnet und wurde mit $G_{sat} \approx 1.2 mS$ abgeschätzt. Dieser
+entspricht einem Serienwiderstand von $R_s \approx 833 \Omega$.
 
 
+\subsection{Quantisierter Leitwert}
+Aus \cite{skript11} entnehmen wir den folgenden Zusammenhang:
+
+  \begin{equation}
+    R = R_s + R_n
+  \end{equation}
+
+Hierbei ist $R = G_{exp}^{-1}$ der Gesamtwiderstand der Schaltung ermittelt aus
+dem gemessenen Leitwert, $R_s$ der Serienwiderstand und $R_n = 1/G_n$ mit
+$G_n = n*\frac{2e^2}{h} $ der (quantisierte) Widerstand der Struktur. In diesem
+Versuchsteil verwenden wir die Struktur I um den quantisierten Leitwert nachzuweisen.
+Wir berechnen ihn als nach obiger Gleichung mit:
+
+  \begin{equation}
+    G_n = \frac{1}{G_{exp}^{-1}-R_s}
+  \end{equation}
+
+Woraus sich Abb. \ref{fig:I} ergibt:
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Berechnung-Bilder/j.eps}
+  \caption{Struktur I, quantisierter Leitwert}
+  \label{fig:I}
+\end{figure}
+
+Als Orientierung sind hier Linien für die Vielfachen von $\frac{2e^2}{h} \approx 77.5 \mu S$
+eingezeichnet. Die Ausbildung der Plateaus ist erkennbar, wenn auch nicht stark
+ausgeprägt. Als Referenz befinden sich in Anhang A vom Versuchsbetreuer gegebene
+Daten einer anderen Struktur, in der die QUantisierung deutlicher erkennbar ist.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Schlussfolgerung}
