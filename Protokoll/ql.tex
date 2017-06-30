@@ -75,48 +75,36 @@ wobei $dn = D(E)dE$. Somit ist (mit $v = \sqrt{2E/m}$):
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 
-Text zum Experiment mit vielleicht einer Grafik:
-
-\begin{figure}[h]
-
-\caption{ein Bild vom Versuchsaufbau, Aus: \cite{melissinos1966,melissinos2003}.}
-\label{fig:samplefig}
-\end{figure}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
-a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
-tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
-consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
-ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
-quis nisi.
+Das Experiment ist bebildert in \cite{skript11} erklärt und besteht im Wesentlichen
+aus einem Lock-In-Verstärker an den zunächste zwei Transformatoren sowie die
+Widerstandsbox angeschlossen sind. Nun wird überprüft, ob der gemessene Widerstand
+dem angeschlossenen Widerstand entspricht. Die Abweichung vom Idealfall dient uns
+dann als systematischer bzw. zufälliger Fehler (weiteres hierzu in Abschnitt III).
+Nachdem die Widerstandsbox vermessen wurde wird der Messstab in flüssiges Helium
+getaucht und entsprechend der Tabelle 2.1 in \cite{skript11} verkabelt. Nun messen
+wir erneut die Ströme/Spannungen und ermitteln hieraus den Leitwert (weiteres
+hierzu in Abschnitt III).
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Daten und Analyse}
+\subsection{Kalibrierung mittels Widerstandsbox}
+Die Widerstandsbox mit ihren fest einstellbaren Widerständen bietet uns die
+Möglichkeit den Messaufbau zu kalibrieren. Hierzu wurden für die festeingestellten
+Widerstände 100 $\Omega$, 1 $k\Omega$, 10 $k\Omega$, 100 $k\Omega$ und 1 $M\Omega$
+die Real- und Imaginärteile der Impedanz bei verschiedenen Spannungswerten ermittelt
+und durch pythagoräische Addtion der Widerstand ermittelt. Als Fehler wurde auf der
+Widerstandsbox $0.1\%$ für den Bereich $100\Omega - 10k\Omega$ und $1\%$ für den
+Bereich $10k\Omega - 1M\Omega$ gegeben. Aus unseren Messdaten ergibt sich Abbildung
+\ref{fig:box}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
-a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
-tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
-consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
-ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
-quis nisi. Tabelle \ref{tab:table1}:
-
-
-\begin{table}[h]
-\caption{\label{tab:table1}Eine Tabelle mit Fußnoten}
-\begin{ruledtabular}
-\begin{tabular}{cccccccc}
- &$r_c$ (\AA)&$r_0$ (\AA)&$\kappa r_0$&
- &$r_c$ (\AA) &$r_0$ (\AA)&$\kappa r_0$\\
-\hline
-Cu& 0.800 & 14.10 & 2.550 &Sn\footnotemark[1] & 0.680 & 1.870 & 3.700 \\
-Ag& 0.990 & 15.90 & 2.710 &Pb\footnotemark[1] & 0.450 & 1.930 & 3.760 \\
-Tl& 0.480 & 18.90 & 3.550 & & & & \\
-\end{tabular}
-\end{ruledtabular}
-\footnotetext[1]{Entnommen aus Ref.~\cite{bevington2003}.}
-\end{table}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Berechnung-Bilder/box.eps}
+  \caption{Kalibrierung mit Widerstandsbox, lineare Regression}
+  \label{fig:box}
+\end{figure}
 
 
 
@@ -143,6 +131,7 @@ quis nisi.
 \bibliography{sample-paper}
 \bibliographystyle{prsty}
 \begin{thebibliography}{99}
+\bibitem{skript11}S. F. Fischer et al. : F-Praktikumsversuch Quantisierter Leitwert von Punktkontakten (Versuchsskript) (2011)
 \bibitem{wees88}B. J. van Wees et al. : Quantized Conductance of Point Contacts in a Two-Dimensional Electron Gas, Physical Review Letters Vol. 60 Nr.9 (1988)
 \bibitem{wharam88}D. A. Wharam et al. : One-dimensional transport and the quantisation of the ballistic resistance Verlag, Phys. C: Solid State Phys. 21  (1988)
 \bibitem{apetrii04}Gabriela Apetrii : Quantum point contacts with one and two vertical modes fabricated with an atomic force microscope, Dissertation (2004)
