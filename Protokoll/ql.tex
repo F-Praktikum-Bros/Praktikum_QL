@@ -45,7 +45,7 @@ Der Leitwert ist das Inverse des Widerstandes und ist ein Maß dafür, wie gut e
 Material Strom leitet. Die Quantisierung des Leitwertes kann wie folgt erklärt
 werden: Wir modellieren den Quantenpunktkontakt als ein effektives Kastenpotential
 mit Breite $d_x$ und Dicke $d_y$. Es bilden sich senkrecht zur Bewegungsrichtung
-stehende Elektronenwellen mit der Energie
+stehende Elektronenwellen mit der folgenden Energie aus:
 
   \begin{equation}
     E_{lm} = \frac{\pi^2 \hbar^2}{2 m_e} \left(\frac{l^2}{d_x^2}+\frac{m^2}{d_y^2} \right)
@@ -106,7 +106,7 @@ Die Widerstandsbox mit ihren fest einstellbaren Widerständen bietet uns die
 Möglichkeit den Messaufbau zu kalibrieren. Hierzu wurden für die festeingestellten
 Widerstände 100 $\Omega$, 1 $k\Omega$, 10 $k\Omega$, 100 $k\Omega$ und 1 $M\Omega$
 die Real- und Imaginärteile der Impedanz bei verschiedenen Spannungswerten ermittelt
-und durch pythagoräische Addtion der Widerstand ermittelt. Als Fehler wurde auf der
+und durch pythagoräische Addition der Widerstand ermittelt. Als Fehler wurde auf der
 Widerstandsbox $0.1\%$ für den Bereich $100\Omega - 10k\Omega$ und $1\%$ für den
 Bereich $10k\Omega - 1M\Omega$ gegeben. Aus unseren Messdaten ergibt sich Abb.
 \ref{fig:box}. Aus dem Achsenabschnitt können wir den Serienleitwert bestimmen:
@@ -118,19 +118,19 @@ Bereich $10k\Omega - 1M\Omega$ gegeben. Aus unseren Messdaten ergibt sich Abb.
 Die Abweichung der Steigung von 1 werden wir als systematischen Fehler der Messung
 interpretieren. Wir müssen also für die folgenden Diagramme den Leitwert wie folgt
 korrigieren: $G_{exp} \rightarrow a^{-1} G_{exp}$. Diese Kalibrierung erlaubt es
-uns im nächsten Teil die ermittelten Leitwerte zu korrigieren und ein somit ein
-akkurates Ergebnis für die Quantisierung des Leitwertes zu erhalten.
+uns im nächsten Teil die ermittelten Leitwerte korrekt zu ermitteln und ein somit
+ein akkurates Ergebnis für die Quantisierung des Leitwertes zu erhalten.
 
 
 \subsection{Serienleitwert MODFET}
 Nun untersuchen wir den MODFET, welchen wir (an einem Messstab befestigt) in
 flüssiges Helium getaucht haben. Zusätzlich wird eine Gate-Spannung angelegt,
-in deren Abhängigkeit wir der Leitwert bestimmen.Für diesen Teil des Experimentes
-verwenden wir die Struktur G. In Abb. \ref{fig:G} sind 2 der 3 Bereiche des MODFET
-gut zu sehen. Im Koordinatenursprung erkennen wir den Sperrbereich des Transistors,
-in dem kein Strom mehr fließt.Im Anschluss befindet sich der lineare Bereich, in
-dem sich der Transistor wie ein ohmscher Widerstand verhält, es gilt:
-$R = U/I \rightarrow G = I/U$.
+in deren Abhängigkeit wir der Leitwert bestimmen. Für diesen Teil des Experimentes
+verwenden wir zunächst die Struktur G. In Abb. \ref{fig:G} sind 2 der 3 Bereiche
+des MODFET gut zu sehen. Im Koordinatenursprung erkennen wir den Sperrbereich des
+Transistors in dem kein Drain-Strom fließt, der Transistor sperrt. Im Anschluss
+befindet sich der lineare Bereich, in dem sich der Transistor wie ein ohmscher
+Widerstand verhält, es gilt: $R = U/I \rightarrow G = I/U$.
 
 \begin{figure}[h]
   \centering
@@ -140,31 +140,36 @@ $R = U/I \rightarrow G = I/U$.
 \end{figure}
 
 Der Leitwert nähert sich gegen Ende des linearen
-Bereiches einem Maximum an, der dem Sättigungsbereich entspricht. Hier verhält
-sich der Transistor wie eine nur noch durch die Eingangsspannung gesteuerte
-Stromquelle. Der Sättigungsleitwert ist in Abb. \ref{fig:G} als schwarze Linie
-gekennzeichnet und wurde mit $G_{sat} \approx 1.2 mS$ abgeschätzt. Dieser
-entspricht einem Serienwiderstand von $R_s \approx 833 \Omega$.
+Bereiches einem Maximum an, der dem Serienleitwert entspricht. In diesem sogenannten
+Sättigungsbereich verhält sich der Transistor wie eine nur noch durch die Eingangsspannung
+gesteuerte Stromquelle, die Gatespannung ändert den Stromfluss nicht mehr. Der
+Sättigungsleitwert ist in Abb. \ref{fig:G} als schwarze Linie gekennzeichnet und
+wurde mit $G_{sat} \approx 1.2 mS$ abgeschätzt. Dieser entspricht einem Serienwiderstand
+von $R_s \approx 833 \Omega$. Wir verwenden den Serienwiderstand im nächsten Abschnitt
+um die Quantisierung des Leitwertes zu plotten.
 
 
 \subsection{Quantisierter Leitwert}
-Aus \cite{skript11} entnehmen wir den folgenden Zusammenhang:
+In diesem Versuchsteil werden wir den quantisierten Leitwert in Abhängigkeit von
+der Gatespannung beobachten können. Hierfür entnehmen wir aus \cite{skript11}
+den folgenden Zusammenhang:
 
   \begin{equation}
     R = R_s + R_n
   \end{equation}
 
 Hierbei ist $R = G_{exp}^{-1}$ der Gesamtwiderstand der Schaltung ermittelt aus
-dem gemessenen Leitwert, $R_s$ der Serienwiderstand und $R_n = 1/G_n$ mit
-$G_n = n*\frac{2e^2}{h} $ der (quantisierte) Widerstand der Struktur. In diesem
-Versuchsteil verwenden wir die Struktur I um den quantisierten Leitwert nachzuweisen.
-Wir berechnen ihn als nach obiger Gleichung mit:
+dem gemessenen Leitwerten, $R_s$ der Serienwiderstand den wir im vorherigen Teil
+ermittelt haben und $R_n = 1/G_n$ mit $G_n = n*\frac{2e^2}{h} $ der
+(quantisierte) Widerstand der Struktur. Wir verwenden die Struktur I um den
+quantisierten Leitwert nachzuweisen. Wir berechnen ihn nach obiger Gleichung mit:
 
   \begin{equation}
     G_n = \frac{1}{G_{exp}^{-1}-R_s}
   \end{equation}
 
-Woraus sich Abb. \ref{fig:I} ergibt:
+Nach Messen der Leitwerte $G_{exp}$ und Korrektur mit dem Serienwiderstand $R_s$
+ergibt sich Abb. \ref{fig:I}:
 
 \begin{figure}[h]
   \centering
@@ -176,24 +181,16 @@ Woraus sich Abb. \ref{fig:I} ergibt:
 Als Orientierung sind hier Linien für die Vielfachen von $\frac{2e^2}{h} \approx 77.5 \mu S$
 eingezeichnet. Die Ausbildung der Plateaus ist erkennbar, wenn auch nicht stark
 ausgeprägt. Als Referenz befinden sich in Anhang A vom Versuchsbetreuer gegebene
-Daten einer anderen Struktur, in der die QUantisierung deutlicher erkennbar ist.
+Daten einer anderen Struktur, in der die Quantisierung deutlicher erkennbar ist.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Schlussfolgerung}
 
-Schlussoflgerung, sollten wir mal was von nem Buch oder so entnehmen nutzen wir:
-
-
-\begin{quote}
-  Ein Zitat mit Referenz auf das Buch\cite{melissinos1966}
-\end{quote}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
-a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
-tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
-consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
-ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
-quis nisi.
+Die Quantisierung des Leitwertes in einem Feldeffekttransistor
+konnte in diesem Versuch nachgewiesen werden. Die Ausbildung der Plateaus, welche
+uns die Quantisierung anzeigen, sind in Abb. \ref{fig:I} nicht so stark wie gewünscht
+bzw. nicht so stark wie in den Referenzdaten in Anhang A (Abb.\ref{fig:l}). Die
+Gründe hierfür wurden bereits in Abschnitt III.4. diskutiert.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -212,7 +209,7 @@ quis nisi.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+\newpage
 \appendix
 
 \section{Referenzdaten und Grafiken}
@@ -220,7 +217,7 @@ Vom Versuchsbetreuer wurden uns noch die Daten der folgenden Grafiken gegeben.
 Es sind nur die experimentell ermittelten Leitwerte $G_{exp}$ dargestellt, da uns
 keine weiteren Informationen (insbesondere die Kalibrierung mit Widerstandsbox)
 vorliegen. Nichtsdestotrotz ist die Quantisierung des Leitwerts in Abb. \ref{fig:l}
-und Abb. \ref{fig:lfein} deutlicher erkennbar, als die bei unseren Daten der Fall ist.
+und Abb. \ref{fig:lfein} deutlicher erkennbar, als dies bei unseren Daten der Fall ist.
 
 \begin{figure}[h]
   \centering
