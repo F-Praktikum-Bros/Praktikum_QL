@@ -11,6 +11,7 @@ nofootinbib,superscriptaddress]{revtex4-1}
 \usepackage[utf8]{inputenc} % Umlaute
 
 \def\andname{\hspace*{-0.5em},} % definiert die Trennung zwischen 2 Autoren neu
+\setlength\parindent{0pt} % kein indent
 
 % Titelseite
 \begin{document}
@@ -24,12 +25,12 @@ nofootinbib,superscriptaddress]{revtex4-1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id facilisis ligula,
-a ultrices nibh. Nullam suscipit tellus nec mauris fermentum, ornare luctus neque
-tincidunt. Aenean commodo tincidunt varius. Phasellus faucibus metus non erat
-consectetur bibendum. Duis et luctus risus, at egestas justo. Nunc eleifend lacus
-ac laoreet scelerisque. Aenean cursus dignissim magna in ultrices. In eget nisl
-quis nisi.
+Der ballistische Transport von Elektronen eines zweidimensionalen Fermigases in einem
+GaAs-AlGaAs Punktkontakt wurde bereits 1987 von Wees et. al  \cite{wees88} untersucht.
+Es wird versucht die Ergebnisse dieses Experimentes zu reproduzieren. Hierbei wird
+zunächst eine verkürzte Herleitung des Phänomens beschrieben, über die Aufnahme
+der Daten und deren Analyse berichtet und danach über die Unsicherheiten des Experimentes
+diskutiert.
 \end{abstract}
 
 
@@ -57,14 +58,14 @@ Zustände ist dann: $E_{ges} = E_{lm} + E_z$.
 Die Zustandsdichte in einem eindimensionalen System ist gegeben durch:
 
   \begin{equation}
-    D(E) dE = \frac{1}{\pi \hbar} \sqrt{\frac{m}{2 E}}dE
+    D(E) \mathrm{d}E = \frac{1}{\pi \hbar} \sqrt{\frac{m}{2 E}}\mathrm{d}E
   \end{equation}
 
-Bei Anlegen einer kleinen Spannung $dV$ folgt ein kleiner Strom $dI = e v dn$,
-wobei $dn = D(E)dE$. Somit ist (mit $v = \sqrt{2E/m}$):
+Bei Anlegen einer kleinen Spannung $\mathrm{d}V$ folgt ein kleiner Strom $\mathrm{d}I = e v \mathrm{d}n$,
+wobei $\mathrm{d}n = D(E)\mathrm{d}E$. Somit ist (mit $v = \sqrt{2E/m}$):
 
   \begin{equation}
-    G = \frac{dI}{dV} = \frac{evD(E)dE}{dV} = \frac{e^2vD(E)dV}{dV} = \frac{2e^2}{h}
+    G = \frac{\mathrm{d}I}{\mathrm{d}V} = \frac{evD(E)\mathrm{d}E}{\mathrm{d}V} = \frac{e^2vD(E)\mathrm{d}V}{\mathrm{d}V} = \frac{2e^2}{h}
   \end{equation}
 
 
@@ -183,14 +184,44 @@ eingezeichnet. Die Ausbildung der Plateaus ist erkennbar, wenn auch nicht stark
 ausgeprägt. Als Referenz befinden sich in Anhang A vom Versuchsbetreuer gegebene
 Daten einer anderen Struktur, in der die Quantisierung deutlicher erkennbar ist.
 
+
+\subsection{Fehler und Ergebnisanalyse}
+Die schwache Ausprägung der Plateaus kann mehrere Gründe haben. Die wichtigste
+Voraussetzung für die Berechnung in Abschnitt I ist die Quantisierung der Elektronen,
+d.h. das Ausbilden von Wellen senkrecht zur Bewegungsrichtung. Dies ist nur
+gewährleistet, wenn ein ballistischer Transport von Elektronen
+stattfindet. Ballistischer Transport heißt, dass die mittlere freie Weglänge der
+Elektronen größer ist als die geometrische Ausdehnung der Engstelle. In anderen
+Worten: die Streuung der Elektronen muss so gering wie möglich sein! Dies wurde
+im Experiment u.A. dadurch gewährleistet, indem die Temperatur auf $T=4K$ abgesenkt
+wurde. Allerdings sind weitere Effekte wie die Streuung an Unreinheiten, anderen
+Elektronen oder Phononen nicht quantifiziert wurden, womit nicht bestätigt
+werden kann, dass die Annahme des ballistischen Transports gerechtfertigt ist.
+Diese Überlegungen wollen wir wie folgt illustrieren:
+Bei $T=4K$ haben 0.02\% der Elektronen eine Energie, die höher als die
+Fermi-Energie ist und verstoßen somit gegen unsere Voraussetzungen. Angesichts der
+niedrigen Zahl können wir die Temperatur als Fehler also erst einmal vernachlässigen.
+Schwerwiegender ist, dass wir nichts über die Abmessungen des Punktkontakts wissen
+und somit nicht rechnerisch nachprüfen können, ob die mittlere freie Weglänge
+tatsächlich wesentlich kleiner ist, als die Geometrie des Kontakts.
+Neben diesen Unsicherheiten welche aus dem theoretischen Konstrukt entstehen, gibt
+es auch experimentelle Unsicherheiten, die nicht berücksichtigt wurden. So wurde
+keine Analyse zum Rauschen der Elektronik durchgeführt, welche auf Grund der geringen
+Größenordnung der verwandten Spannungen/Ströme einen Einfluss haben könnte.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Schlussfolgerung}
 
-Die Quantisierung des Leitwertes in einem Feldeffekttransistor
+Die Quantisierung des Leitwertes an einem Punktkontakt
 konnte in diesem Versuch nachgewiesen werden. Die Ausbildung der Plateaus, welche
 uns die Quantisierung anzeigen, sind in Abb. \ref{fig:I} nicht so stark wie gewünscht
 bzw. nicht so stark wie in den Referenzdaten in Anhang A (Abb.\ref{fig:l}). Die
-Gründe hierfür wurden bereits in Abschnitt III.4. diskutiert.
+möglichen Gründe hierfür, aufgeteilt in theoretisch/konzeptionelle und experimentelle,
+wurden bereits in Abschnitt III.4. diskutiert. \\
+Zusammenfassend kann man sagen, dass der Versuch ein verhältnismäßig einfach zu
+realisierendes und für den Ausführenden interessantes Experiment zeigt, indem man
+das quantenmechanische Phänomen der Quantisierung direkt beobachten kann. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,25 +230,14 @@ Gründe hierfür wurden bereits in Abschnitt III.4. diskutiert.
 \begin{thebibliography}{99}
 \bibitem{skript11}S. F. Fischer et al. : F-Praktikumsversuch Quantisierter Leitwert von Punktkontakten (Versuchsskript) (2011)
 \bibitem{wees88}B. J. van Wees et al. : Quantized Conductance of Point Contacts in a Two-Dimensional Electron Gas, Physical Review Letters Vol. 60 Nr.9 (1988)
-\bibitem{wharam88}D. A. Wharam et al. : One-dimensional transport and the quantisation of the ballistic resistance Verlag, Phys. C: Solid State Phys. 21  (1988)
-\bibitem{apetrii04}Gabriela Apetrii : Quantum point contacts with one and two vertical modes fabricated with an atomic force microscope, Dissertation (2004)
-\bibitem{vanhouten96}Henk van Houten et al. :  Quantum Point Contacts, Physics Today July S. 22–27, (1996)
-\bibitem{knop07}Michael H. Knop :  Ballistische Gleichrichtung in asymmetrischen elektronischen Wellenleiterkreuzen, Dissertation (2007)
-\bibitem{fischer02}S. F. Fischer et al. :  Control of the confining potential in ballistic constrictions using a persistent charging effect, Applied Physics Letters Vol. 81 Nr.15 (2002)
-\bibitem{apetrii02}G. Apetrii et al. :  Influence of processing parameters on the transport properties of quantum point contacts fabricated with an atomic force microscope, Institute of Physics Publishing Semicond. Sci. Technol. 17 S. 735–739 (2002)
 \end{thebibliography}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 \appendix
 
 \section{Referenzdaten und Grafiken}
 Vom Versuchsbetreuer wurden uns noch die Daten der folgenden Grafiken gegeben.
-Es sind nur die experimentell ermittelten Leitwerte $G_{exp}$ dargestellt, da uns
-keine weiteren Informationen (insbesondere die Kalibrierung mit Widerstandsbox)
-vorliegen. Nichtsdestotrotz ist die Quantisierung des Leitwerts in Abb. \ref{fig:l}
-und Abb. \ref{fig:lfein} deutlicher erkennbar, als dies bei unseren Daten der Fall ist.
 
 \begin{figure}[h]
   \centering
@@ -225,6 +245,12 @@ und Abb. \ref{fig:lfein} deutlicher erkennbar, als dies bei unseren Daten der Fa
   \caption{Struktur L, quantisierter Leitwert}
   \label{fig:l}
 \end{figure}
+
+\newpage
+Es sind nur die experimentell ermittelten Leitwerte $G_{exp}$ dargestellt, da uns
+keine weiteren Informationen (insbesondere die Kalibrierung mit Widerstandsbox)
+vorliegen. Nichtsdestotrotz ist die Quantisierung des Leitwerts in Abb. \ref{fig:l}
+und Abb. \ref{fig:lfein} deutlicher erkennbar, als dies bei unseren Daten der Fall ist.
 
 \begin{figure}[h]
   \centering
